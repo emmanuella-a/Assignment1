@@ -1,0 +1,195 @@
+---
+
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Emmanuella-3097405</title>
+
+    <link rel="stylesheet" href="src/styles/styles.css" />
+  </head>
+
+  <body>
+    <div class="navbar">
+      <div class="logo">BTS</div>
+      <div class="nav-links">
+        <a href="/home">Home</a>
+        <a href="/about">About</a>
+        <a href="/tour">Tour</a>
+        <a href="/news">Blog</a>
+        <a href="/playlist">Playlist</a>
+      </div>
+    </div>
+
+    <main>
+      <h1 class="playlist-header">My Playlist</h1>
+
+      <div class="playlist">
+        <!-- Playlist Section -->
+        <div id="playlist-section">
+          <ul id="playlist">
+            <li class="playlist-item">
+              <div class="playlist-rank">01</div>
+              <div class="playlist-song">
+                <span class="song-title">Dynamite</span>
+              </div>
+            </li>
+            <li class="playlist-item">
+              <div class="playlist-rank">02</div>
+              <div class="playlist-song">
+                <span class="song-title">Butter</span>
+              </div>
+            </li>
+            <li class="playlist-item">
+              <div class="playlist-rank">03</div>
+              <div class="playlist-song">
+                <span class="song-title">Life Goes On</span>
+              </div>
+            </li>
+            <li class="playlist-item">
+              <div class="playlist-rank">04</div>
+              <div class="playlist-song">
+                <span class="song-title">Mic Drop</span>
+              </div>
+            </li>
+            <li class="playlist-item">
+              <div class="playlist-rank">05</div>
+              <div class="playlist-song">
+                <span class="song-title">Boy With Luv</span>
+              </div>
+            </li>
+            <li class="playlist-item">
+              <div class="playlist-rank">06</div>
+              <div class="playlist-song">
+                <span class="song-title">Permission to Dance</span>
+              </div>
+            </li>
+            <li class="playlist-item">
+              <div class="playlist-rank">07</div>
+              <div class="playlist-song">
+                <span class="song-title">Save Me</span>
+              </div>
+            </li>
+            <li class="playlist-item">
+              <div class="playlist-rank">08</div>
+              <div class="playlist-song">
+                <span class="song-title">Black Swan</span>
+              </div>
+            </li>
+            <li class="playlist-item">
+              <div class="playlist-rank">09</div>
+              <div class="playlist-song">
+                <span class="song-title">Spring Day</span>
+              </div>
+            </li>
+            <li class="playlist-item">
+              <div class="playlist-rank">10</div>
+              <div class="playlist-song">
+                <span class="song-title">Fake Love</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="button-container">
+        <button id="shuffle-button">Shuffle Playlist</button>
+      </div>
+
+      <!-- Add Song Form -->
+      <section id="add-song-section">
+        <form id="add-song-form">
+          <label for="song-title">Song Title:</label>
+          <input
+            type="text"
+            id="song-title"
+            placeholder="Enter song title"
+            required
+          />
+          <button type="submit">Add Song</button>
+        </form>
+      </section>
+
+      <script>
+        // Select DOM elements
+        const playlist = document.getElementById("playlist");
+        const shuffleButton = document.getElementById("shuffle-button");
+        const addSongForm = document.getElementById("add-song-form");
+        const songTitleInput = document.getElementById("song-title");
+
+        // Function to update song numbers
+        function updateSongNumbers() {
+          const songs = Array.from(playlist.children);
+          songs.forEach((song, index) => {
+            const rank = song.querySelector(".playlist-rank");
+            rank.textContent = String(index + 1).padStart(2, "0"); // Add leading zero
+          });
+        }
+
+        // Shuffle Playlist
+        shuffleButton.addEventListener("click", () => {
+          const songs = Array.from(playlist.children); // Convert NodeList to Array
+          const shuffled = songs.sort(() => Math.random() - 0.5); // Shuffle array
+
+          // Clear existing playlist and append shuffled songs
+          playlist.innerHTML = "";
+          shuffled.forEach((song) => playlist.appendChild(song));
+
+          // Update song numbers
+          updateSongNumbers();
+        });
+
+        // Add Song to Playlist
+        addSongForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+
+          const songTitle = songTitleInput.value.trim(); // Get song title
+          if (songTitle) {
+            // Create new song item
+            const newSong = document.createElement("li");
+            newSong.classList.add("playlist-item");
+
+            // Create rank element
+            const rank = document.createElement("div");
+            rank.classList.add("playlist-rank");
+            rank.textContent = String(playlist.children.length + 1).padStart(
+              2,
+              "0"
+            ); // Add leading zero
+
+            // Create song title element
+            const songContainer = document.createElement("div");
+            songContainer.classList.add("playlist-song");
+            const songTitleElement = document.createElement("span");
+            songTitleElement.classList.add("song-title");
+            songTitleElement.textContent = songTitle;
+
+            // Append title to container
+            songContainer.appendChild(songTitleElement);
+
+            // Append rank and song container to new song
+            newSong.appendChild(rank);
+            newSong.appendChild(songContainer);
+
+            // Append new song to playlist
+            playlist.appendChild(newSong);
+
+            // Clear input field
+            songTitleInput.value = "";
+          }
+        });
+      </script>
+    </main>
+  </body>
+
+  <footer>
+    <a href="https://www.griffith.ie/" target="_blank"
+      ><img src="images/griffith.webp" alt="Griffith College" /></a
+    >
+    <p>Copyright © 2022 Big Hit Music / HYBE. All Rights Reserved</p>
+  </footer>
+</html>

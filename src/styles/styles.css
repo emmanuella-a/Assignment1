@@ -1,0 +1,538 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+    position: sticky; /* Makes the navbar sticky */
+    top: 0; /* Sticks to the top of the page */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background: #000;
+    opacity: 90%;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f00; /* Highlighted in red */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 1rem;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f00; /* Red hover effect */
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh; /* Full viewport height */
+    background-image: url('/images/bts-bg.jpeg');
+    background-size: cover; /* Covers the entire section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-weight: bolder;
+    font-size: 6rem;
+    margin-bottom: 30px;
+    color: #ff6666;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 1rem 0;
+    color: #ff6666;
+}
+
+.hero-buttons {
+    margin-top: 2rem;
+}
+
+.hero-buttons .btn {
+    display: inline-block;
+    padding: 0.8rem 3rem;
+    margin: 0.5rem;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    color: #fff;
+    background: #f00;
+    transition: background 0.3s;
+}
+
+.hero-buttons .btn:hover {
+    background: #ff6666;
+}
+
+
+/* Content Section */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    gap: 80px;
+}
+
+.container .image img {
+    width: 500px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.image img:hover {
+    transform: scale(0.5);
+}
+
+.content {
+    max-width: 500px;
+    text-align: left;
+}
+
+.content h2 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 3rem;
+    color: #ff6666;
+    margin-bottom: 15px;
+    padding-top: 20px;
+}
+
+.content p {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: black;
+    text-align: justify;
+}
+
+
+
+
+  /* About Page Styling */
+
+
+  .aboutpage {
+    font-family: Arial, sans-serif;
+    line-height: 1;
+    background-color:whitesmoke;
+    height: 100vh; /* Ensures the body takes up the full viewport height */
+  }
+
+
+
+
+.home-page {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: center;
+    margin: 60px;
+
+}
+
+
+.image img {
+    width: 400px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.image img:hover {
+    transform: scale(1.1);
+}
+
+.description {
+
+    padding: 5px;
+    align-items: center;
+}
+
+.description h2 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 3rem;
+    color: #ff6666;
+    margin-bottom: 15px;
+    padding-top: 20px;
+    font-weight: bold;
+    
+
+}
+
+.description p {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: black;
+    text-align: justify;
+}
+
+
+
+
+
+
+.memberspage {
+    background-color: black;
+    opacity: 90%;
+    text-align: center;
+    padding: 70px;
+    
+}
+
+.memberspage h2
+{
+    color: white;
+    font-size: 2.5rem;
+}
+
+
+.mmm {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    margin: 50px;
+}
+
+.members {
+    text-align: center;
+    margin: 20px;
+}
+
+
+.members img {
+    width: 300px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.single-member img {
+    width: 300px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.members h3 {
+    margin: 10px 0 0;
+    font-size: 1.2em;
+    color: white;
+}
+
+.single-member {
+    grid-column: 2 / 3; /* Centers the last row */
+    justify-self: center;
+    margin: 20px;
+}
+
+.single-member h3
+{
+    margin: 10px 0 0;
+    font-size: 1.2em;
+    color: white;
+}
+
+/* Hero Section */
+.tour-hero {
+    height: 80vh;
+    background-image: url('/images/bts_bg.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.tour-hero h1 {
+    font-size: 5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color:#f00;
+}
+
+.tour-hero p {
+    font-size: 1.5rem;
+    max-width: 600px;
+    
+}
+
+/* Tour Dates Section */
+.tour-dates {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.tour-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+    background-color: #fff;
+    width: 80%;
+    max-width: 1000px;
+    margin: 10px 0;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 8px;
+}
+
+.date, .location, .venue {
+    margin: 5px 0;
+    font-size: 1.2em;
+}
+
+.ticket-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.ticket-button:hover {
+    background-color: #444;
+}
+
+
+
+/* Blog Page Styling */
+
+.blog-heading h1
+{
+   padding: 20px;
+
+    border-bottom: 1px groove black;
+}
+
+.blog-container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    margin: 50px;
+
+}
+
+.blog-card {
+  width: 100%;
+  
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+ 
+}
+
+.blog-image {
+  width: 400px;
+  height: auto;
+  display: block;
+  
+}
+
+.blog-content {
+  padding: 16px;
+}
+
+.blog-date {
+  font-size: 0.9em;
+  color: #999;
+  margin-bottom: 8px;
+}
+
+.blog-title {
+  font-size: 1.5em;
+  color: #333;
+  margin: 8px 0;
+}
+
+.blog-description {
+  font-size: 1em;
+  color: #555;
+  line-height: 1.6;
+}
+
+.read-more {
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+  
+
+
+
+
+
+
+ /* Playlist Styles */
+.playlist {
+    max-width: 100%;
+    margin: 0 50px;
+  }
+
+  .playlist-header
+{
+   padding: 20px;
+
+    border-bottom: 1px groove black;
+}
+  
+  #playlist {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .playlist-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .playlist-item:last-child {
+    border-bottom: none;
+  }
+  
+  .playlist-rank {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #111;
+    flex: 0 0 50px;
+  }
+  
+  .playlist-song {
+    flex: 1;
+    margin-left: 10px;
+  }
+  
+  .song-title {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  /* Shuffle Button */
+  .button-container {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  #shuffle-button {
+    background-color: #e63946;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  #shuffle-button:hover {
+    background-color: #d32f2f;
+  }
+  
+  /* Add Song Form */
+  #add-song-section {
+    max-width: 800px;
+    margin: 20px auto;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  button[type="submit"] {
+    background-color: #e63946;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #d32f2f;
+  }
+
+
+/* Footer styling */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 20px 30px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+    margin-top: auto;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
