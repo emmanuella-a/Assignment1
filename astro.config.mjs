@@ -3,11 +3,15 @@ import mdx from '@astrojs/mdx';
 
 // https://astro.build/config
 export default defineConfig({
+  base: '/',
     integrations: [mdx()],
     markdown: {
       extendDefaultPlugins: true,
     },
 });
+
+
+
 
 
 
