@@ -167,7 +167,7 @@ body {
 
 .image img {
     width: 400px;
-    height: auto;
+    max-height: 500px;
     object-fit: cover;
     border-radius: 5px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
@@ -180,7 +180,7 @@ body {
 
 .description {
 
-    padding: 5px;
+    padding: auto;
     align-items: center;
 }
 
@@ -191,7 +191,7 @@ body {
     font-size: 3rem;
     color: #ff6666;
     margin-bottom: 15px;
-    padding-top: 20px;
+    padding-top: 30px;
     font-weight: bold;
     
 
