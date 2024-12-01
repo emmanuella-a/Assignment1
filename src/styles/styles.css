@@ -528,11 +528,18 @@ footer {
     align-items: center;
     background-color: #333;
     color: white;
-    padding: 20px 30px;
+    padding:10px 30px;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
     margin-top: auto;
 }
 
 footer p {
     font-size: 0.9rem;
+}
+
+footer img
+{
+  width: 150px;
+  height: auto;
+  
 }
